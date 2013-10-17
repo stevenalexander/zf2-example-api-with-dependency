@@ -1,6 +1,14 @@
 {
+    "name": "ZF2 Example API with custom dependency",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:stevenalexander/zf-example-module1.git"
+        }
+    ],
     "require": {
         "php": ">=5.3.3",
-        "zendframework/zendframework": ">=2.2.4"
+        "zendframework/zendframework": ">=2.2.4",
+        "stevenalexander/zf-example-module1" : "1.0.2"
     }
 }
