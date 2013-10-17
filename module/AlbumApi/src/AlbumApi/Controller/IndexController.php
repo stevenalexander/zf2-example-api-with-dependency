@@ -2,12 +2,18 @@
 namespace AlbumApi\Controller;
 
 use AlbumApi\Controller\AbstractRestfulJsonController;
+use ExampleCommon\Entity\Person;
+
 use Zend\View\Model\JsonModel;
 
 class IndexController extends AbstractRestfulJsonController
 {
     public function getList()
     {
-        return new JsonModel(array('data' => "Welcome to the Zend Framework Album API example"));
+        $person = new Person();
+        $person->firstName = 'Alec';
+        $person->lastName = 'Test';
+
+        return new JsonModel(array('person' => $person));
     }
 }
